@@ -1,0 +1,1415 @@
+[
+    {
+        "id": "13f7257d937af4df",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b20bd50a8b8b5d5f",
+        "type": "serial in",
+        "z": "13f7257d937af4df",
+        "name": "Arduino_OUT",
+        "serial": "77dc84162d35bd23",
+        "x": 470,
+        "y": 80,
+        "wires": [
+            [
+                "ec442d9d6efd920d",
+                "c1523db32e1a9c08"
+            ]
+        ]
+    },
+    {
+        "id": "46f155f485df59c8",
+        "type": "ui_button",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "76084c604d8f841c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Wpisanie m",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "m",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "837afb8d6f281ebf"
+            ]
+        ]
+    },
+    {
+        "id": "837afb8d6f281ebf",
+        "type": "serial out",
+        "z": "13f7257d937af4df",
+        "name": "Arduino_IN",
+        "serial": "77dc84162d35bd23",
+        "x": 310,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "194daab1177f265b",
+        "type": "ui_button",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "76084c604d8f841c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Wpisanie f",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "f",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "837afb8d6f281ebf"
+            ]
+        ]
+    },
+    {
+        "id": "872a77b16f5d5a6d",
+        "type": "ui_button",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "76084c604d8f841c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Wpisanie s",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "s",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "837afb8d6f281ebf"
+            ]
+        ]
+    },
+    {
+        "id": "948bdcea2f969632",
+        "type": "ui_button",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "76084c604d8f841c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Wpisanie b",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "b",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "837afb8d6f281ebf"
+            ]
+        ]
+    },
+    {
+        "id": "ec442d9d6efd920d",
+        "type": "mqtt out",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "topic": "IOT Projekt",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b5817439ea252a4b",
+        "x": 690,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "fab8f3b070b7bd27",
+        "type": "mqtt in",
+        "z": "13f7257d937af4df",
+        "name": "IOT Projekt",
+        "topic": "IOT Projekt",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b5817439ea252a4b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 690,
+        "y": 240,
+        "wires": [
+            [
+                "b041d1340db264bd",
+                "0f7f29226ea34004"
+            ]
+        ]
+    },
+    {
+        "id": "b041d1340db264bd",
+        "type": "debug",
+        "z": "13f7257d937af4df",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c1523db32e1a9c08",
+        "type": "ui_chart",
+        "z": "13f7257d937af4df",
+        "name": "Wykres Temp",
+        "group": "76084c604d8f841c",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "label": "Wykres pomiarów",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 700,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f7f29226ea34004",
+        "type": "ui_text",
+        "z": "13f7257d937af4df",
+        "group": "76084c604d8f841c",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "name": "Ostatni pomiar",
+        "label": "Ostatni pomiar wynosił: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 920,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5469238be717201d",
+        "type": "http request",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.open-meteo.com/v1/forecast?latitude=50.0614&longitude=19.9366&current=temperature_2m,relative_humidity_2m,wind_speed_10m",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "674e6f70e2683d7b"
+            ]
+        ]
+    },
+    {
+        "id": "904abe0234f9716e",
+        "type": "inject",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "5469238be717201d",
+                "8cb79d9624c1692c",
+                "edd848a6e8c687d3"
+            ]
+        ]
+    },
+    {
+        "id": "674e6f70e2683d7b",
+        "type": "json",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 500,
+        "wires": [
+            [
+                "e2d8d19d37357e41",
+                "91b68f4a2c4c8f5d",
+                "63eaddd24b597cfa"
+            ]
+        ]
+    },
+    {
+        "id": "e2d8d19d37357e41",
+        "type": "change",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current.temperature_2m",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 500,
+        "wires": [
+            [
+                "97e18ba457f5153e",
+                "f02bbd057bfbf565"
+            ]
+        ]
+    },
+    {
+        "id": "0d534d0ac59c1256",
+        "type": "debug",
+        "z": "13f7257d937af4df",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "8dd973a5c1c3b134",
+        "type": "function",
+        "z": "13f7257d937af4df",
+        "name": "function 2",
+        "func": "msg.payload['timestamp']=Date.now();\nmsg.payload.metrics[0]['name'] = \"Maszyna_Student9\";\nmsg.payload.metrics[0]['timestamp'] = Date.now();\nmsg.payload.metrics[0]['value'] = Math.floor(Math.random()*8000);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 360,
+        "wires": [
+            [
+                "f5d2953eb97cadc7"
+            ]
+        ]
+    },
+    {
+        "id": "f5d2953eb97cadc7",
+        "type": "mqtt sparkplug device",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "metrics": {
+            "Maszyna_Student9": {
+                "dataType": "Int32"
+            }
+        },
+        "broker": "39ad29a4e91ebd17",
+        "birthImmediately": false,
+        "bufferDevice": false,
+        "x": 450,
+        "y": 360,
+        "wires": [
+            [
+                "0d534d0ac59c1256"
+            ]
+        ]
+    },
+    {
+        "id": "e492c5c411a8281a",
+        "type": "inject",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"metrics\":[{\"name\":\"Maszyna_Student9\",\"dataType\":\"Integer\",\"value\":1}]}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 360,
+        "wires": [
+            [
+                "8dd973a5c1c3b134"
+            ]
+        ]
+    },
+    {
+        "id": "97e18ba457f5153e",
+        "type": "ui_chart",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "2d72e6ce1d202570",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 850,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f02bbd057bfbf565",
+        "type": "ui_text",
+        "z": "13f7257d937af4df",
+        "group": "2d72e6ce1d202570",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obecna temperatura",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 880,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "91b68f4a2c4c8f5d",
+        "type": "change",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current.relative_humidity_2m",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 580,
+        "wires": [
+            [
+                "ec95096b8575bba8",
+                "4d1e4dc8bf1858a4"
+            ]
+        ]
+    },
+    {
+        "id": "ec95096b8575bba8",
+        "type": "ui_chart",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "2d72e6ce1d202570",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Wilgotność",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 850,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d1e4dc8bf1858a4",
+        "type": "ui_text",
+        "z": "13f7257d937af4df",
+        "group": "2d72e6ce1d202570",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obecna wilgotność",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 870,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "63eaddd24b597cfa",
+        "type": "change",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current.wind_speed_10m",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 660,
+        "wires": [
+            [
+                "2065f012b90a37cc",
+                "866fd25aeb290937"
+            ]
+        ]
+    },
+    {
+        "id": "2065f012b90a37cc",
+        "type": "ui_chart",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "2d72e6ce1d202570",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Wiatr",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 830,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "866fd25aeb290937",
+        "type": "ui_text",
+        "z": "13f7257d937af4df",
+        "group": "2d72e6ce1d202570",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obecny wiatr",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 850,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "8cb79d9624c1692c",
+        "type": "http request",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.open-meteo.com/v1/forecast?latitude=-33.8678&longitude=151.2073&current=temperature_2m,relative_humidity_2m,wind_speed_10m&timeformat=unixtime",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 740,
+        "wires": [
+            [
+                "0d2c02fe93c5a622"
+            ]
+        ]
+    },
+    {
+        "id": "0d2c02fe93c5a622",
+        "type": "json",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 740,
+        "wires": [
+            [
+                "e8bfb62e1fff55f0",
+                "6e268f9d3d7a6b42",
+                "74af6b5d673dfc6e"
+            ]
+        ]
+    },
+    {
+        "id": "e8bfb62e1fff55f0",
+        "type": "change",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current.temperature_2m",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 740,
+        "wires": [
+            [
+                "9c6a8096d606031b",
+                "2d4a76590ffeb982"
+            ]
+        ]
+    },
+    {
+        "id": "9c6a8096d606031b",
+        "type": "ui_chart",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "2d6769fa7d433851",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 850,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2d4a76590ffeb982",
+        "type": "ui_text",
+        "z": "13f7257d937af4df",
+        "group": "2d6769fa7d433851",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obecna temperatura",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 880,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "6e268f9d3d7a6b42",
+        "type": "change",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current.relative_humidity_2m",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 820,
+        "wires": [
+            [
+                "c0013e3f206cf87e",
+                "cc27d09a7bef822c"
+            ]
+        ]
+    },
+    {
+        "id": "c0013e3f206cf87e",
+        "type": "ui_chart",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "2d6769fa7d433851",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Wilgotność",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 850,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc27d09a7bef822c",
+        "type": "ui_text",
+        "z": "13f7257d937af4df",
+        "group": "2d6769fa7d433851",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obecna wilgotność",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 870,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "74af6b5d673dfc6e",
+        "type": "change",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current.wind_speed_10m",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 900,
+        "wires": [
+            [
+                "99b0881084ab9dd1",
+                "a3d6400ec58e46fe"
+            ]
+        ]
+    },
+    {
+        "id": "99b0881084ab9dd1",
+        "type": "ui_chart",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "2d6769fa7d433851",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Wiatr",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 830,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3d6400ec58e46fe",
+        "type": "ui_text",
+        "z": "13f7257d937af4df",
+        "group": "2d6769fa7d433851",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obecny wiatr",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 850,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "edd848a6e8c687d3",
+        "type": "http request",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.open-meteo.com/v1/forecast?latitude=-78.1586&longitude=16.4063&current=temperature_2m,relative_humidity_2m,wind_speed_10m&timeformat=unixtime",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 980,
+        "wires": [
+            [
+                "92ce7d61e6997d2e"
+            ]
+        ]
+    },
+    {
+        "id": "92ce7d61e6997d2e",
+        "type": "json",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 980,
+        "wires": [
+            [
+                "611df9d38fb7193c",
+                "f2ac6cacff6c2c32",
+                "34fd63828ddeb14a"
+            ]
+        ]
+    },
+    {
+        "id": "611df9d38fb7193c",
+        "type": "change",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current.temperature_2m",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 980,
+        "wires": [
+            [
+                "df299b57adb7953e",
+                "61c17b5d63eda908"
+            ]
+        ]
+    },
+    {
+        "id": "df299b57adb7953e",
+        "type": "ui_chart",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "a62da336fbd684c8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 850,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "61c17b5d63eda908",
+        "type": "ui_text",
+        "z": "13f7257d937af4df",
+        "group": "a62da336fbd684c8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obecna temperatura",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 880,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "f2ac6cacff6c2c32",
+        "type": "change",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current.relative_humidity_2m",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 1060,
+        "wires": [
+            [
+                "ff3026041763f94e",
+                "e20a535d22e910f1"
+            ]
+        ]
+    },
+    {
+        "id": "ff3026041763f94e",
+        "type": "ui_chart",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "a62da336fbd684c8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Wilgotność",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 850,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e20a535d22e910f1",
+        "type": "ui_text",
+        "z": "13f7257d937af4df",
+        "group": "a62da336fbd684c8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obecna wilgotność",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 870,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "34fd63828ddeb14a",
+        "type": "change",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current.wind_speed_10m",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 1140,
+        "wires": [
+            [
+                "8d9552892774cf6d",
+                "9639b83d90c11a8b"
+            ]
+        ]
+    },
+    {
+        "id": "8d9552892774cf6d",
+        "type": "ui_chart",
+        "z": "13f7257d937af4df",
+        "name": "",
+        "group": "a62da336fbd684c8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Wiatr",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 830,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9639b83d90c11a8b",
+        "type": "ui_text",
+        "z": "13f7257d937af4df",
+        "group": "a62da336fbd684c8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obecny wiatr",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 850,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "4ede074f1b2f83f2",
+        "type": "ui_spacer",
+        "z": "13f7257d937af4df",
+        "name": "spacer",
+        "group": "76084c604d8f841c",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "77dc84162d35bd23",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "COM11",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "76084c604d8f841c",
+        "type": "ui_group",
+        "name": "Czujnik temperatury Arduino",
+        "tab": "23677386517b36bf",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b5817439ea252a4b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.eclipseprojects.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "technologieIOT",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "technologieIOT",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "technologieIOT",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "39ad29a4e91ebd17",
+        "type": "mqtt-sparkplug-broker",
+        "name": "",
+        "deviceGroup": "",
+        "eonName": "",
+        "broker": "149.156.138.167",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "enableStoreForward": false,
+        "compressAlgorithm": "",
+        "aliasMetrics": false,
+        "useTemplates": true,
+        "manualEoNBirth": false,
+        "primaryScada": ""
+    },
+    {
+        "id": "2d72e6ce1d202570",
+        "type": "ui_group",
+        "name": "Pogoda: Kraków",
+        "tab": "23677386517b36bf",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2d6769fa7d433851",
+        "type": "ui_group",
+        "name": "Pogoda: Sydey",
+        "tab": "23677386517b36bf",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a62da336fbd684c8",
+        "type": "ui_group",
+        "name": "Pogoda: Antarktyda",
+        "tab": "23677386517b36bf",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "23677386517b36bf",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
